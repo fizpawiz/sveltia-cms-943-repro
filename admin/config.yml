@@ -1,0 +1,13 @@
+backend:
+  name: test-repo
+media_folder: static/img
+collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    # `slug` is NOT a field in this collection, so this template is
+    # unresolvable. That is the trigger.
+    preview_path: blog/{{fields.slug}}
+    fields:
+      - { name: title, label: Title, widget: string }
